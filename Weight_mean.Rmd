@@ -1,0 +1,115 @@
+---
+output:
+  word_document:
+    fig_caption: yes
+    reference_docx: "boot/data/sec_04_template.docx"
+    toc: false
+bibliography: "boot/data/report_biblio.bib"
+csl: "boot/data/ices-journal-of-marine-science.csl"
+---
+
+
+```{r pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(icesAdvice)
+library(flextable)
+library(FLCore)
+library(officedown)
+library(officer)
+library(TAF)
+library(png)
+library(grid)
+library(gridExtra)
+```
+
+
+```{r setup, knitr, echo=FALSE, message=FALSE, warning=FALSE}
+opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, fig.pos='!hbt',fig.align = 'center' )
+
+# To print the inline numbers using normal notation and not scientific notation.
+options(scipen=999)
+
+```
+
+
+```{r caption_settings}
+tabruns.start <- list(
+   # run_word_field("STYLEREF 2 \\s"),
+   # ftext("."),
+  run_autonum(seq_id = "Table", pre_label = "", post_label = "", tnd=3, tns=".", start=1)
+)
+
+tabruns <- list(
+  run_autonum(seq_id = "Table", pre_label = "", post_label = "", tnd=3, tns=".")
+)
+
+figruns.start <- list(
+  run_autonum(seq_id = "Figure", pre_label = "", post_label = "", tnd=3, tns=".", start=1)
+)
+
+figruns <- list(
+  run_autonum(seq_id = "Figure", pre_label = "", post_label = "", tnd=3, tns=".")
+)
+
+```
+
+```{r officer_landscape}
+op_section <- prop_section(type = "continuous")
+close_section <- prop_section(
+    page_size = page_size(orient = "landscape"), 
+    type = "continuous")
+
+```
+
+
+
+```{r}
+run_esc<-"boot/data/run/" 
+esc<-readLines(paste0(run_esc,"Esc.txt")) 
+
+path_mod<-paste0("report/run/",esc)
+```
+
+# Analysis of Mean Weight by Age for Commercial Fleet and Acoustic Surveys with Linear Mixed-Effects Models: Observations and Estimations from 1989 to 2024
+
+María José Zúñiga,  Margarita Rincón, Fernando Ramos
+
+
+Fish body weight is essential for converting modeled numbers-at-age into metrics such as total catch biomass or a biomass-based abundance index [@Methot2013]. Stock Synthesis (SS3) uses a file called `"wtatage.ss"` to incorporate empirical weight-at-age observations [SS3, @Methot2024]. For anchovy in the Gulf of Cádiz, mean weight by age data is available from the commercial fleet (*SEINE*, Figure  `r run_reference("fig_weight_by_quarters_SEINE")` ) and three acoustic surveys (*PELAGO*, *ECOCADIZ*, and *ECOCADIZ-RECLUTAS*, Figure  `r run_reference("fig_weight_by_quarters_SURVEY")` ). Out-of-range values were removed based on specific criteria: 
+
+ - Weights below 15 grams for ages 2 and 3.
+ - Age 0 individuals were removed in quarters 1 and 2. 
+ - Weights less than or equal to 2 grams across all quarters.
+ - Weights above 40 grams were discarded. 
+ - Weights below 20 grams for age 3 in quarter 4.
+
+This procedure was applied to each dataset prior to merging them into a single unified dataset [@Taylor2014]. Missing values were removed, and weight was transformed using the natural logarithm. For each quarter and each subset, a linear mixed model was fitted, with log-transformed weight as the dependent variable and age as the fixed effect. A random effect for year was incorporated to capture interannual variability. Estimated datasets were generated for combinations of year (1989–2024) and age (0–3), and log-transformed weight estimates were calculated accordingly. Figure  `r run_reference("fig_weight_by_quarters_obs_est")` presents a comparison between observed and predicted values for each quarter. These mixed models account for both fixed and random variability in the data. Nonlinear mixed-effects models were implemented using the nlme R package, version 3.1-164 [@Pinheiro2002; @Lindstrom1990; @Pinheiro1996].
+
+The mean weights estimate from the linear mixed-effects model were used to populate the `"wtatage.ss"` file, which requires mean weight data for ages 0 to 3, covering the period 1989-2023. These weights were specified for both the beginning and mid-point of each quarter and are used for all data sets included in the model.
+
+
+```{r}
+include_graphics(file.path(path_mod,"fig_weight_by_quarters_SEINE.png"))
+```
+
+Figure `r run_bookmark("fig_weight_by_quarters_SEINE", figruns.start)`: ane.27.9a stock. Observed mean weights (in kilograms) for commercial fleet (*SEINE*) by age group (0 to 3 years) for four quarters (Q1, Q2, Q3, Q4) over the period 1989 to 2024.
+
+
+
+```{r}
+include_graphics(file.path(path_mod,"fig_weight_by_quarters_SURVEY.png"))
+```
+
+Figure `r run_bookmark("fig_weight_by_quarters_SURVEY", figruns)`: ane.27.9a stock. Observed mean weights (in kilograms) for acoustic surveys (*PELAGO*, *ECOCADIZ* and *ECOCADIZ-RECLUTAS*) by age group (0 to 3 years).
+
+
+```{r}
+include_graphics(file.path(path_mod,"fig_weight_by_quarters_obs_est.png"))
+```
+
+Figure `r run_bookmark("fig_weight_by_quarters_obs_est", figruns)`: ane.27.9a stock. Observed and predicted mean weights (in kilograms) by age group (0 to 3 years) for four quarters (Q1, Q2, Q3, Q4) over the period 1989 to 2024. Circles represent observed data points, while solid lines indicate estimates from the linear mixed-effects model. Each panel corresponds to a specific quarter. Data were obtained from the commercial fleet (SEINE) and acoustic surveys (*PELAGO*, *ECOCADIZ*, and *ECOCADIZ-RECLUTAS*).
+
+
+# Referencias
+
+

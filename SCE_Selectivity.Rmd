@@ -1,0 +1,239 @@
+---
+# title: "Selectivity"
+# author: María José Zúñiga, Margarita Rincón, Fernando Ramos 
+# date: '`r format(Sys.Date())`'
+output:
+  word_document:
+    fig_caption: yes
+    reference_docx: "boot/data/template.docx"
+    toc: false
+bibliography: "boot/data/report_biblio.bib"
+csl: "boot/data/ices-journal-of-marine-science.csl"
+---
+
+
+```{r pkgs, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(icesAdvice)
+library(flextable)
+library(tibble)
+library(tidyr)
+library(FLCore)
+library(officedown)
+library(officer)
+library(TAF)
+library(png)
+library(grid)
+library(gridExtra)
+library(r4ss)
+library(tidyverse)
+library(lubridate)
+library(ss3diags)
+```
+
+
+```{r setup, knitr, echo=FALSE, message=FALSE, warning=FALSE}
+opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, fig.pos='!hbt',fig.align = 'center' )
+
+# To print the inline numbers using normal notation and not scientific notation.
+options(scipen=999)
+
+```
+
+
+```{r caption_settings}
+tabruns.start <- list(
+   # run_word_field("STYLEREF 2 \\s"),
+   # ftext("."),
+  run_autonum(seq_id = "Table", pre_label = "", post_label = "", tnd=3, tns=".", start=1))
+
+tabruns <- list(
+  run_autonum(seq_id = "Table", pre_label = "", post_label = "", tnd=3, tns="."))
+
+figruns.start <- list(
+  run_autonum(seq_id = "Figure", pre_label = "", post_label = "", tnd=3, tns=".", start=1))
+
+figruns <- list(
+  run_autonum(seq_id = "Figure", pre_label = "", post_label = "", tnd=3, tns="."))
+
+```
+
+```{r officer_landscape}
+op_section <- prop_section(type = "continuous")
+close_section <- prop_section(
+    page_size = page_size(orient = "landscape"), 
+    type = "continuous")
+
+```
+
+# Selectivity 
+
+María José Zúñiga (1), Margarita Rincón (1), Fernando Ramos (1) 
+ 
+1. Centro Oceanográfico de Cádiz (COCAD-IEO), CSIC
+ `r format(Sys.Date())`
+ 
+## Context
+
+In this analysis, the sensitivity of the selectivity in the ECOCADIZ survey was evaluated. The baseline scenario (*S1.0_4FLEETS*) assumes a the fishery and the surveys selectivity were defined as logistic functions fixed over time. The results of this scenario show that  (Table `r #run_reference("tb_params_est")`).
+
+
+```{r}
+include_graphics(file.path("report/run/S1.0_4FLEETS","tb_params_est.png"))
+```
+
+Figure `r #run_bookmark("tb_params_est", figruns)`: ane.27.9a stock. Parameters estimated by the initial base model (*S1.0_4FLEETS*).
+
+
+## Sensitivity scenarios
+
+The Table `r run_reference("ft0")` summarizes the different sensitivity scenarios 
+
+
+Table `r run_bookmark("ft0", tabruns)`:  ane.27.9a stock. Sensitivity scenarios.
+
+```{r}
+
+path_mod<-"report/run/comparison/Sel"
+```
+
+
+```{r}
+include_graphics(file.path(path_mod,"tb_scenarios_Sel.png"))
+```
+
+## Results
+
+The performance of each scenario is evaluated using key diagnostic metrics [@Carvalho2021]. These include model convergence, ensuring the optimization process was successful; total likelihood, which measures the overall fit of the model to the data; survey-specific likelihood, indicating how well the model fits the survey data; and age composition likelihood, assessing the fit to the age structure in the data. Additionally, Root Mean Square Error (RMSE) is calculated for both the indices and age composition data to quantify the accuracy of the model’s predictions (Table `r run_reference("ft1")`).
+
+Table `r run_bookmark("ft1", tabruns)`:  ane.27.9a stock. Diagnostics by scenario.
+
+The parameters estimated for each scenario are shown in Table `r run_reference("ft2")`. Figure `r run_reference("fig_catchability2")` compares fleet-specific catchability across scenarios. Figure r run_reference("compare13_indices_flt5") contrasts observed versus expected values for the abundance indices, and Figure `r run_reference("compare10_recruits_uncertainty")` displays the time series estimates for recruitment, spawning biomass, and fishing mortality.
+
+
+```{r}
+path_mod<-"report/run/comparison/Sel"
+include_graphics(file.path(path_mod,"tb_Diagstics.png"))
+```
+
+The parameters estimated for each scenario are shown in Table `r run_reference("ft2")`. Figure `r run_reference("fig_catchability2")` compares fleet-specific catchability across scenarios. Figure `r run_reference("compare13_indices_flt5")` contrasts observed versus expected values for the abundance indices, and Figure `r run_reference("compare10_recruits_uncertainty")` displays the time series estimates for recruitment, spawning biomass, and fishing mortality.
+
+Table `r run_bookmark("ft2", tabruns)`:  ane.27.9a stock. Parameters estimated by scenario.
+
+```{r}
+path_mod<-"report/run/comparison/Sel"
+include_graphics(file.path(path_mod,"tb_Parameters.png"))
+```
+
+
+
+```{r}
+path_mod<-"report/run/comparison/Sel"
+include_graphics(file.path(path_mod,"fig_catchability2.png"))
+```
+
+Figure `r run_bookmark("fig_catchability2", figruns)`: ane.27.9a stock. Estimated catchability parameters for the different surveys indices.
+
+
+### S1.0_4FLEETS:  logistic fixed  for commercial fleet and all surveys.
+
+```{r}
+include_graphics(file.path("output/run/S1.0_4FLEETS/plots/" ,"sel02_multiple_fleets_age1.png"))
+```
+
+
+### S1.0_4FLEETS_SelECO:  S1.0_4FLEETS + logistic selectivity ECOCADIZ: two blocks  (2004-2014, 2015-2023).
+
+```{r}
+include_graphics(file.path("output/run/S1.0_4FLEETS_SelECO/plots/"  ,"sel11_timevary_surf_flt6sex1.png"))
+```
+
+
+### S1.0_4FLEETS_SelvarECO: S1.0_4FLEETS + logistic selectivity ECOCADIZ: random-walk  (2004-2014) and fixed (2015-2023).
+
+```{r}
+include_graphics(file.path("output/run/S1.0_4FLEETS_SelvarECO/plots/"  ,"sel11_timevary_surf_flt6sex1.png"))
+```
+
+
+```{r fig.width=5, fig.height=6, dpi=300, fig.cap= "Mean age for surveys S1.0_4FLEETS_SelECO"}
+path_esc_s1<-"report/run/S1.0_4FLEETS/" 
+path_esc_s2<-"report/run/S1.0_4FLEETS_SelECO/" 
+path_esc_s3<-"report/run/S1.0_4FLEETS_SelvarECO/" 
+# Cargar las imágenes
+img1 <- png::readPNG(file.path(path_esc_s1,"fig_meanage_fit_Pelago.png"))
+img2 <- png::readPNG(file.path(path_esc_s1,"fig_meanage_fit_Ecocadiz.png"))
+img3 <- png::readPNG(file.path(path_esc_s1,"fig_meanage_fit_EcocadizRecl.png"))
+
+img4<- png::readPNG(file.path(path_esc_s2,"fig_meanage_fit_Pelago.png"))
+img5 <- png::readPNG(file.path(path_esc_s2,"fig_meanage_fit_Ecocadiz.png"))
+img6 <- png::readPNG(file.path(path_esc_s2,"fig_meanage_fit_EcocadizRecl.png"))
+
+img7<- png::readPNG(file.path(path_esc_s3,"fig_meanage_fit_Pelago.png"))
+img8 <- png::readPNG(file.path(path_esc_s3,"fig_meanage_fit_Ecocadiz.png"))
+img9 <- png::readPNG(file.path(path_esc_s3,"fig_meanage_fit_EcocadizRecl.png"))
+
+# Convertir a grobs (graphic objects) para grid.arrange
+g1 <- rasterGrob(img1, interpolate=TRUE)
+g2 <- rasterGrob(img2, interpolate=TRUE)
+g3 <- rasterGrob(img3, interpolate=TRUE)
+
+g4 <- rasterGrob(img4, interpolate=TRUE)
+g5 <- rasterGrob(img5, interpolate=TRUE)
+g6 <- rasterGrob(img6, interpolate=TRUE)
+
+g7 <- rasterGrob(img7, interpolate=TRUE)
+g8 <- rasterGrob(img8, interpolate=TRUE)
+g9 <- rasterGrob(img9, interpolate=TRUE)
+
+
+# Organizar las imágenes en una cuadrícula
+grid.arrange(g1, g2, g3,g4, g5, g6,g7, g8, g9, ncol=3)
+
+```
+
+
+```{r fig.width=5, fig.height=6, dpi=300}
+
+path_mod<-"report/run/comparison/Sel"
+# Cargar las imágenes
+img1 <- png::readPNG(file.path(path_mod,"compare13_indices_flt5.png"))
+img2 <- png::readPNG(file.path(path_mod,"compare13_indices_flt6.png"))
+img3 <- png::readPNG(file.path(path_mod,"compare13_indices_flt7.png"))
+img4 <- png::readPNG(file.path(path_mod,"compare13_indices_flt8.png"))
+
+# Convertir a grobs (graphic objects) para grid.arrange
+g1 <- rasterGrob(img1, interpolate=TRUE)
+g2 <- rasterGrob(img2, interpolate=TRUE)
+g3 <- rasterGrob(img3, interpolate=TRUE)
+g4 <- rasterGrob(img4, interpolate=TRUE)
+
+# Organizar las imágenes en una cuadrícula
+grid.arrange(g1, g2, g3, g4, ncol=1)
+```
+
+Figure `r run_bookmark("compare13_indices_flt5", figruns.start)`: ane.27.9a stock. Comparison of the model fit to the data observed versus expected values  of the indices from the  surveys of the  scenarios evaluated. The vertical  lines indicate a 95% uncertainty interval around the index values based on the lognormal error model assumption. 
+
+
+```{r fig.width=5, fig.height=7, dpi=300}
+#list.files("report/run/comparison/Sel")
+path_mod<-"report/run/comparison/Sel"
+# Cargar las imágenes
+img1 <- png::readPNG(file.path(path_mod,"compare2_spawnbio_uncertainty.png"))
+img2 <- png::readPNG(file.path(path_mod,"compare8_Fvalue_uncertainty.png"))
+img3 <- png::readPNG(file.path(path_mod,"compare10_recruits_uncertainty.png"))
+# Convertir a grobs (graphic objects) para grid.arrange
+g1 <- rasterGrob(img1, interpolate=TRUE)
+g2 <- rasterGrob(img2, interpolate=TRUE)
+g3 <- rasterGrob(img3, interpolate=TRUE)
+# Organizar las imágenes en una cuadrícula
+grid.arrange(g3, g1,g2, ncol=1)
+
+```
+
+Figure `r run_bookmark("compare10_recruits_uncertainty", figruns)`: ane.27.9a stock. Comparison of the time series estimated by the model for  recruitment (millions of fish), spawning biomass (in tons), and fishing mortality (year-1), of the  scenarios evaluated.
+
+
+
+
+## Reference
