@@ -464,7 +464,8 @@ file.copy(from=paste0(run_out,"/plots/comp_agefit_data_weighting_TA1-8_SEINE.png
     theme(plot.title=element_text(hjust=0.5),legend.position="top")
   ggsave(file.path(paste0(path_rep,"/fig_catchability.png")), fig_q,  width=4, height=4)
   
-  
+  # natural mortality
+  head(output$Natural_Mortality)
   
   #SSplotSPR(output)
   #SSplotCatch(output)
