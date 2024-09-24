@@ -1,0 +1,12 @@
+Warning 1 : Forecast=0 or -1, so rest of forecast file will not be read and can be omitted;
+Warning 2 : bias adjustment ramp extends into forecast; biasadj set to 0.0 internally for forecast years
+Warning 3 Adjustment:  recdev_end: 2023 > retro_yr: 2020 reset 
+Note 1 Suggestion: Are you sure you want so few early recrdevs? Better to include in range of main recdevs 4
+Warning 4 : parameter init value is greater than parameter max 3.278 > 3 for parm: 7; search for <now check> in echoinput.sso for parm_type
+Warning 5 : poor convergence in Fmsy, final dy/dy2= -0.174975
+Warning 6 : Fmsy/mey is >3x of Fspr are you sure?  check for convergence 
+Warning 7 : Fmsy.mey is close to max allowed; check for convergence 
+Warning 8 : Final gradient: 25.8181 is larger than final_conv: 0.0001
+Note 2 Information: A revised protocol for the Fcast_yr specification is available and recommended.
+Note 3 Information:  N parameters that are on or within 1% of min-max bound: 2; check results, variance may be suspect
+ 8 warnings  and 3 notes 
