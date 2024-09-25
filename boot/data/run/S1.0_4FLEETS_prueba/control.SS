@@ -53,11 +53,11 @@
    0	  3	       2.97	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break1   
    0	  3	       2.97	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break2
    0	  3	       1.33	0	0	0	 -3	0	0	   0	   0	0	0	0	#_M_break3   
-  0	  3	       1.33	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break4
-  0	  3	       1.33	0	0	0	 -1	0	0	   0	   0	0	0	0	#_M_break5
-  0	  3	       1.33	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break6
-  0	  3	       1.33	0	0	0	 1	0	0	   0	   0	0	0	0	#_M_break7
-    0	  10	       6	0	0	0	-3	0	0	   0	   0	0	0	0	#_L_at_Amin       
+   0	  3	       1.33	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break4
+   0	  3	       1.33	0	0	0	 -1	0	0	   0	   0	0	0	0	#_M_break5
+   0	  3	       1.33	0	0	0	-3	0	0	   0	   0	0	0	0	#_M_break6
+   0	  3	       1.33	0	0	0	 1	0	0	   0	   0	0	0	0	#_M_break7
+   0	  10	       6	0	0	0	-3	0	0	   0	   0	0	0	0	#_L_at_Amin       
     5	  22	   19.96	0	0	0	-3	0	0	   0	   0	0	0	0	#_L_at_Amax       
   0.1	   2	    0.46	0	0	0	-3	0	0	   0	   0	0	0	0	#_VonBert_k       
  0.05	0.25	     0.1	0	0	0	-3	0	0	   0	   0	0	0	0	#_CV_young        
@@ -174,7 +174,7 @@
 #_LO  HI    INIT  PRIOR   PR_SD   PR_type   PHASE  #  parm_name
 # -2   5.5   0.5   0       0       0        4  #_AgeSel_P_1_ECOCADIZ_Block1
 # -2   5.5   0     0       0       0        4  #_AgeSel_P_1_ECOCADIZ_Block2  
-#-2   5.5   0.5   0       0       0        4  #_AgeSel_P_2_ECOCADIZ_Block1
+# -2   5.5   0.5   0       0       0        4  #_AgeSel_P_2_ECOCADIZ_Block1
 # -2   5.5   0.2   0       0       0        4  #_AgeSel_P_2_ECOCADIZ_Block2 
 #
 0   #  use 2D_AR1 selectivity? (0/1)
