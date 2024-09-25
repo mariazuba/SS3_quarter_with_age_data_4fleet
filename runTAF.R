@@ -24,9 +24,11 @@ library(rmarkdown)
 # sourceTAF("model")
 # sourceTAF("output") 
 # sourceTAF("report")
-
+library(icesTAF)
+library(rmarkdown)
 boot<-"boot/initial/data/run/" 
-esc<-"S1.0_4FLEETS_prueba"
+list.files(boot)
+esc<-"S1.0_4FLEETS_SelECO_EcoR.0.3" 
 write(esc, file = paste0(boot,"Esc.txt"))
 sourceTAF("bootstrap")
 sourceTAF("data")

@@ -17,6 +17,7 @@ mean_catch_per_seas <- aggregate(catch ~ seas, data = catch_first_3_years, FUN =
 
 # Mostrar el resultado
 mean_catch_per_seas
+sum(mean_catch_per_seas$catch)
 #'*########################################################################*
 
 
@@ -64,7 +65,7 @@ summary(bp_model)
 plot(bp_model)
 
 # Agregar las líneas de los quiebres en el gráfico de la serie de tiempo
-plot(capturas_ts, main = "Capturas de Peces con Quiebres Estructurales")
+plot(capturas_ts, main = "Capturas  con Quiebres Estructurales")
 lines(bp_model)
 
 # Extraer los puntos de quiebre estimados
