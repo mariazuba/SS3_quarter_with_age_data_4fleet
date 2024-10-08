@@ -82,7 +82,7 @@
 0	   0	  0	0	0	0	-4	0	0	0	0	0	0	0	#_SR_autocorr 
 #_no timevary SR parameters
 1 #do_recdev:  0=none; 1=devvector (R=F(SSB)+dev); 2=deviations (R=F(SSB)+dev); 3=deviations (R=R0*dev; dev2=R-f(SSB)); 4=like 3 with sum(dev2) adding penalty
-1991 # first year of main recr_devs; early devs can preceed this era
+1989 # first year of main recr_devs; early devs can preceed this era
 2023 # last year of main recr_devs; forecast devs start in following year
 2 #_recdev phase
 1 # (0/1) to read 13 advanced options
@@ -92,8 +92,8 @@
 1 #_lambda for Fcast_recr_like occurring before endyr+1
 1984.1   #_last_early_yr_nobias_adj_in_MPD 
 1988.7   #_first_yr_fullbias_adj_in_MPD 
-2023.0   #_last_yr_fullbias_adj_in_MPD 
-2028.9   #_first_recent_yr_nobias_adj_in_MPD 
+2021   #_last_yr_fullbias_adj_in_MPD 
+2023   #_first_recent_yr_nobias_adj_in_MPD 
 0.9608  #_max_bias_adj_in_MPD (1.0 to mimic pre-2009 models) 
 0 #_period of cycles in recruitment (N parms read below)
 -5 #min rec_dev
@@ -103,7 +103,7 @@
 #
 #Fishing Mortality info
 0.3 # F ballpark
--2023 # F ballpark year (neg value to disable)
+-2001 # F ballpark year (neg value to disable)
 3 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
 3 # max F or harvest rate, depends on F_Method
 4 # N iterations for tuning F in hybrid method (recommend 3 to 7)
@@ -111,10 +111,10 @@
 #_initial_F_parms; for each fleet x season that has init_catch; nest season in fleet; count = 1
 #_for unconstrained init_F, use an arbitrary initial catch and set lambda=0 for its logL
 #_ LO HI INIT PRIOR PR_SD  PR_type  PHASE
--1  4  0.8   0.8  0.2    0        2 # InitF_seas_1_SEINE
--1  4  0.8   0.8  0.2    0        2 # InitF_seas_2_SEINE
--1  4  0.8   0.8  0.2    0        2 # InitF_seas_3_SEINE
--1  4  0.8   0.8  0.2    0        2 # InitF_seas_4_SEINE
+0  3  0.3   0.3  -1    0.2        1 # InitF_seas_1_SEINE
+0  3  0.3   0.3  -1    0.2        1 # InitF_seas_2_SEINE
+0  3  0.3   0.3  -1    0.2        1 # InitF_seas_3_SEINE
+0  3  0.3   0.3  -1    0.2        1 # InitF_seas_4_SEINE
 #
 #_Q_setup for fleets with cpue or survey data
 #_fleet	link	link_info	extra_se	biasadj	float  #  fleetname

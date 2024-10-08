@@ -76,7 +76,7 @@
 0 # future feature: 0/1 to make realized sigmaR a function of SR curvature
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn # parm_name
 1	  25	  20	  0	    0	    0	       1	    0	      0	      0	        0	        0	      0	      0	      #_SR_LN(R0)   
-0	  2	    0.8 	0 	  0   	0	      -1	    0	      0	      0	        0	        0	      0	      0	      #_SR_BH_steep
+  0	  2	    0.8 	0 	  0   	0	      -1	    0	      0	      0	        0	        0	      0	      0	      #_SR_BH_steep
 0	  2	    0.6	  0	0	0	-4	0	0	0	0	0	0	0	#_SR_sigmaR   
 -5	 5	  0	0	0	0	-4	0	0	0	0	0	0	0	#_SR_regime   
 0	   0	  0	0	0	0	-4	0	0	0	0	0	0	0	#_SR_autocorr 
@@ -163,7 +163,7 @@
 -2	3.5	0	  0	0	0	3	0	0	0	0	0	1	1	#_AgeSel_P_1_ECOCADIZ   
 -2	3.5	0.2 0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECOCADIZ    
 -2	3.5	0	  0	0	0	2	0	0	0	0	0	0	0	#_AgeSel_P_1_ECORECLUTAS   
--2	3.5	1  	0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECORECLUTAS 
+-2	3.5	1  	0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECORECLUTAS
 #_timevary selex parameters
 #_LO  HI    INIT  PRIOR   PR_SD   PR_type   PHASE  #  parm_name
  -2   3.5   0.5   0       0       0        4  #_AgeSel_P_1_ECOCADIZ_Block1
