@@ -125,8 +125,8 @@
 -9999	0	0	0	0	0	#_terminator 
 #_Q_parms(if_any);Qunits_are_ln(q)
 #_LO	HI	INIT	PRIOR	PR_SD	PR_type	PHASE	env-var	use_dev	dev_mnyr	dev_mxyr	dev_PH	Block	Blk_Fxn  #  parm_name
--30	15	0	0	0	0	2	0	0	0	0	0	0	0	#_LnQ_base_PELAGO 
--30	15	0	0	0	0	2	0	0	0	0	0	0	0	#_LnQ_base_ECOCADIZ   
+-30	15	0	0	0	0	1	0	0	0	0	0	0	0	#_LnQ_base_PELAGO 
+-30	15	0	0	0	0	1	0	0	0	0	0	0	0	#_LnQ_base_ECOCADIZ   
 -30	15	0	0	0	0	2	0	0	0	0	0	0	0	#_LnQ_base_BOCADEVA 
 -30	15	0	0	0	0	1	0	0	0	0	0	0	0	#_LnQ_base_ECORECLUTAS
 #_no timevary Q parameters
@@ -169,7 +169,7 @@
 -2	3.5	0	  0	0	0	3	0	0	0	0	0	1	1	#_AgeSel_P_1_ECOCADIZ   
 -2	3.5	0.2 0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECOCADIZ    
 -2	3.5	0	  0	0	0	2	0	0	0	0	0	0	0	#_AgeSel_P_1_ECORECLUTAS   
--2	3.5	1  	0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECORECLUTAS 
+-2	3.5	1  	0	0	0	3	0	0	0	0	0	0	0	#_AgeSel_P_2_ECORECLUTAS
 #_timevary selex parameters
 #_LO  HI    INIT  PRIOR   PR_SD   PR_type   PHASE  #  parm_name
  -2   3.5   0.5   0       0       0        4  #_AgeSel_P_1_ECOCADIZ_Block1

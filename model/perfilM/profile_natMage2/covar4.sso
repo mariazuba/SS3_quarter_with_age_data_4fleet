@@ -1,0 +1,8 @@
+#V3.30.22.beta: not an official version of SS;_fast(opt);_compile_date:_
+Sep 18 2024
+;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_13.1
+start_time: Thu Sep 26 10:49:31 2024
+
+57 255
+active-i active-j all-i all-j Par?-i Par?-j label-i label-j corr
+Variances are 0.0 for first two elements, so do not write 

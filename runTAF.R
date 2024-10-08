@@ -28,7 +28,7 @@ library(icesTAF)
 library(rmarkdown)
 boot<-"boot/initial/data/run/" 
 list.files(boot)
-esc<-"S1.0_4FLEETS_SelECO_EcoR.0.3" 
+esc<-"S1.0_4FLEETS_SelECO_RecIndex_Mnewfix"
 write(esc, file = paste0(boot,"Esc.txt"))
 sourceTAF("bootstrap")
 sourceTAF("data")
@@ -37,13 +37,13 @@ sourceTAF("model_01_run")
 sourceTAF("output_01_run")
 sourceTAF("report_01_run")
 
- sourceTAF("model_02_retro")
- sourceTAF("output_02_retro")
- sourceTAF("report_02_retro")
+sourceTAF("model_02_retro")
+sourceTAF("output_02_retro")
+sourceTAF("report_02_retro")
 
 # run reporte.Rmd 
- # render("Report_SS3_quarter_with_age_data_MR_prueba_mod.Rmd", 
- #        output_file = paste0("Report_SS3_quarter_with_age_data_",esc,".pdf"))
+  render("Report_SS3_quarter_with_age_data_MR_prueba_mod_2.Rmd", 
+         output_file = paste0("Report_SS3_quarter_with_age_data_MR_prueba_mod_2",esc,".pdf"))
 
 
 #sourceAll()
