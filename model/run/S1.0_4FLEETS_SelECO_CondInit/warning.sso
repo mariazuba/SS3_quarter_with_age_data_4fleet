@@ -1,47 +1,12 @@
 Warning 1 : Forecast=0 or -1, so rest of forecast file will not be read and can be omitted;
 Warning 2 : At least one block pattern ends in endyr. Check the output parameter value time series to see if the values in forecast years are as intended.
-Warning 3 : bias adjustment ramp extends into forecast; biasadj set to 0.0 internally for forecast years
-Note 1 Suggestion: Are you sure you want so few early recrdevs? Better to include in range of main recdevs 4
+Warning 3 Adjustment: Adjusting recdev_early to: 1986
+Note 1 Suggestion: Are you sure you want so few early recrdevs? Better to include in range of main recdevs 3
 Warning 4 : parameter init value is greater than parameter max 3.278 > 3 for parm: 7; search for <now check> in echoinput.sso for parm_type
-Warning 5 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2004; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 6 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2005; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 7 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2006; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 8 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2007; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 9 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2008; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 10 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2009; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 11 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2010; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 12 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2011; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 13 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2012; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 14 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2013; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 15 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 189; fleet: 14; base_parm#: 11; y: 2014; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 16 : poor convergence in Fspr search 0.6 0.633737
-Warning 17 : Fmult = 40 cannot get high enough to achieve low SPR target: 0.6; SPR achieved is: 0.633737
-Warning 18 : poor convergence in Btarget search 433405 480149
-Warning 19 : poor convergence in Fmsy, final dy/dy2= -0.431238
-Warning 20 : Fmsy.mey is close to max allowed; check for convergence 
-Warning 21 : Final gradient: 99421.2 is larger than final_conv: 0.0001
-Warning 22 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2004; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 23 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2005; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 24 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2006; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 25 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2007; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 26 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2008; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 27 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2009; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 28 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2010; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 29 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2011; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 30 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2012; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 31 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2013; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 32 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2014; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
+Warning 5 : poor convergence in Fmsy, final dy/dy2= -0.164479
+Warning 6 : Fmsy/mey is >3x of Fspr are you sure?  check for convergence 
+Warning 7 : Fmsy.mey is close to max allowed; check for convergence 
+Warning 8 : Final gradient: 108.527 is larger than final_conv: 0.0001
 Note 2 Information: A revised protocol for the Fcast_yr specification is available and recommended.
-Warning 33 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2004; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 34 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2005; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 35 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2006; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 36 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2007; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 37 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2008; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 38 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2009; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 39 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2010; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 40 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2011; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 41 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2012; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 42 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2013; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Warning 43 Adjustment: Adjusted selparm out of base parm bounds. Phase: 4; Inter: 439; fleet: 14; base_parm#: 11; y: 2014; min: -2; max: 3.5; base: 3.21161 timevary_val: 6.10152  Age_inflection_ECOCADIZ(6)
-Note 3 Information:  N parameters that are on or within 1% of min-max bound: 1; check results, variance may be suspect
- 43 warnings  and 3 notes 
+Note 3 Information:  N parameters that are on or within 1% of min-max bound: 2; check results, variance may be suspect
+ 8 warnings  and 3 notes 
