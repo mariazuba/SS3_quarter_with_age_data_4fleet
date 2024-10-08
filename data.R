@@ -44,10 +44,12 @@ dat <- r4ss::SS_read(dir = paste0("boot/data/run/" ,esc))
 # Prepare TAF tables ------------------------------------------------------
 
 # natural maturity table
-age<-c("a0","a1","a2","a3")
-M<-c(2.97,	1.33,	1.33,	1.33)
-natmort <- data.frame(rbind(M)) #ctl$natM
-names(natmort)<-age
+# age<-c("a0","a1","a2","a3")
+# M<-c(2.97,	1.33,	1.33,	1.33)
+
+#dat$ctl$natM
+natmort <-dat$ctl$natM  #data.frame(rbind(M)) #ctl$natM
+#names(natmort)<-age
 
 # catch in tonnes
 catch <- subset(dat$dat$catch, year>=(dat$dat$styr), c('year','seas','catch'))
